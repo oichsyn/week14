@@ -1,0 +1,51 @@
+food.css
+
+/* FOOD 페이지에만 적용할 스타일 */
+
+/* 배경색 변경 */
+body {
+  background-color: #fff9e6;  /* 연한 크림색 */
+}
+
+/* 메인 타이틀 스타일 */
+h1 {
+  font-size: 2.5rem;
+  color: #1c6b4c;
+  text-align: center;
+  margin-top: 60px;
+}
+
+/*음식사*/
+.food-slider {
+  width: 100%;
+  overflow: hidden;
+  margin: 100px 0;
+  border-top: 1.5px solid black;     /* 위쪽 선 */
+  border-bottom: 1.5px solid black; 
+}
+
+.slider-track {display: flex; width: 100%;
+
+  animation: slide 20s linear infinite;}
+
+.slider-track img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.food-slider:hover .slider-track {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
